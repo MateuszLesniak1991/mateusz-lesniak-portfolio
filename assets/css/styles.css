@@ -172,13 +172,13 @@ a {
 
 .orange-shape {
     position: absolute;
-    width: 78%;
-    height: 78%;
+    width: 92%;
+    height: 86%;
     background: var(--accent);
     border-radius: 0 0 0 180px;
     transform: skew(-12deg);
-    right: 0;
-    top: 30px;
+    right: -80px;
+    top: -60px;
 }
 
 .profile-card {
