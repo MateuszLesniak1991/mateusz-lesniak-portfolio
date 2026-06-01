@@ -193,7 +193,7 @@ a {
 .profile-cutout {
     position: relative;
     z-index: 3;
-    width: min(500px, 94%);
+    max-width: 100%;
     height: auto;
     object-fit: contain;
     object-position: center bottom;
