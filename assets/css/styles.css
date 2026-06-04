@@ -194,15 +194,16 @@ h1 {
     border-radius: 0;
     transform: none;
 }
-.hero-content{
+.hero-content {
     position: relative;
     z-index: 2;
-	left: 300px;
+    transform: translateX(220px);
 }
+
 .hero-visual {
     position: relative;
     z-index: 2;
-	right: 150px;
+    transform: translateX(-120px);
 }
 
 .profile-card {
