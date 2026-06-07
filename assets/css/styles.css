@@ -129,7 +129,8 @@ h1 {
 }
 
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.btn-third{
     padding: 14px 24px;
     border-radius: 999px;
     font-size: 14px;
@@ -153,6 +154,16 @@ h1 {
     background: #fff;
 }
 .btn-secondary:hover {
+    border: 1px solid rgba(255, 53, 34);
+    color: #fff;
+    background: rgba(255, 53, 34);
+}
+.btn-third {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: #fff;
+}
+.btn-third:hover {
     border: 1px solid rgba(255, 53, 34);
     color: #fff;
     background: rgba(255, 53, 34);
