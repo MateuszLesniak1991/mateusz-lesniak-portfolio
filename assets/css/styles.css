@@ -159,14 +159,15 @@ h1 {
     background: rgba(255, 53, 34);
 }
 .btn-third {
-    border: 1px solid var(--border);
-    color: var(--text);
-    background: #fff;
-}
-.btn-third:hover {
     border: 1px solid rgba(255, 53, 34);
     color: #fff;
     background: rgba(255, 53, 34);
+    
+}
+.btn-third:hover {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: #fff;
 }
 
 .tech-tags {
