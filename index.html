@@ -187,71 +187,78 @@ Mateusz
     </section>
     
         <section id="certificates" class="section certificates-section">
-        <div class="section-label">Certificates</div>
+    <div class="section-label">Certificates</div>
 
-        <div class="experience-grid">
-            <div>
-                <h2>My certificates</h2>
-            </div>
+    <div class="experience-grid">
+        <div>
+            <h2>My certificates</h2>
+        </div>
 
-            <div class="experience-list">
-                            <div class="experience-item">
+        <div class="experience-list">
+
+            <div class="experience-item">
                 <span>01</span>
                 <p>
                     <a href="https://learn.microsoft.com/api/credentials/share/en-us/MateuszLesniak-9697/2ABBFAA4597B464C?sharingId=71BBAAF3C59DB1D0"
                        target="_blank"
-                       rel="noopener noreferrer">
+                       rel="noopener noreferrer"
+                       onclick="trackCertificateClick('Microsoft Certified: Azure Databricks Data Engineer Associate DP-750', 'Microsoft');">
                         Microsoft Certified: Azure Databricks Data Engineer Associate DP-750
                     </a>
                 </p>
             </div>
 
-                <div class="experience-item">
-                    <span>02</span>
-                                    <p>
+            <div class="experience-item">
+                <span>02</span>
+                <p>
                     <a href="https://credentials.databricks.com/a1b33a9e-ecce-4b6a-9b1a-3b4abfa137ab#acc.mPWJ1pDb"
                        target="_blank"
-                       rel="noopener noreferrer">
-                    Databricks Certified Data Engineer Associate
-                                        </a>
+                       rel="noopener noreferrer"
+                       onclick="trackCertificateClick('Databricks Certified Data Engineer Associate', 'Databricks');">
+                        Databricks Certified Data Engineer Associate
+                    </a>
                 </p>
-                </div>
+            </div>
 
-                <div class="experience-item">
-                    <span>03</span>
-                                                        <p>
+            <div class="experience-item">
+                <span>03</span>
+                <p>
                     <a href="https://learn.microsoft.com/api/credentials/share/en-us/MateuszLesniak-9697/60AD0761C80A05A?sharingId"
                        target="_blank"
-                       rel="noopener noreferrer">
-                    Microsoft Certified: Azure Fundamentals AZ-900
-                     </a>
-                    </p>
-                </div>
+                       rel="noopener noreferrer"
+                       onclick="trackCertificateClick('Microsoft Certified: Azure Fundamentals AZ-900', 'Microsoft');">
+                        Microsoft Certified: Azure Fundamentals AZ-900
+                    </a>
+                </p>
+            </div>
 
-                <div class="experience-item">
-                    <span>04</span>
-                                                          <p>
+            <div class="experience-item">
+                <span>04</span>
+                <p>
                     <a href="https://www.credly.com/badges/f8f2bd6e-2443-416d-976e-a79ec330ceb8/linked_in_profile"
                        target="_blank"
-                       rel="noopener noreferrer">
-                    Google Data Analytics Professional Certificate
+                       rel="noopener noreferrer"
+                       onclick="trackCertificateClick('Google Data Analytics Professional Certificate', 'Coursera');">
+                        Google Data Analytics Professional Certificate
                     </a>
-                    </p>
-                </div>
-                
-                <div class="experience-item">
-                    <span>05</span>
-                                                                              <p>
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <span>05</span>
+                <p>
                     <a href="https://www.credly.com/badges/674e1fb2-0554-4935-83d2-afc34c570f81/linked_in_profile"
                        target="_blank"
-                       rel="noopener noreferrer">
-                    AgileBA® Foundation
+                       rel="noopener noreferrer"
+                       onclick="trackCertificateClick('AgileBA Foundation', 'APMG International');">
+                        AgileBA® Foundation
                     </a>
-                    </p>
-                </div>
+                </p>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="experience" class="section experience-section">
     <div class="section-label">Experience</div>
@@ -383,6 +390,15 @@ Mateusz
 <footer class="footer">
     <p>© 2026 Mateusz Leśniak. Built with HTML, CSS and GitHub Pages.</p>
 </footer>
-
+<script>
+    function trackCertificateClick(certificateName, certificateProvider) {
+        if (typeof gtag === 'function') {
+            gtag('event', 'certificate_click', {
+                certificate_name: certificateName,
+                certificate_provider: certificateProvider
+            });
+        }
+    }
+</script>
 </body>
 </html>
