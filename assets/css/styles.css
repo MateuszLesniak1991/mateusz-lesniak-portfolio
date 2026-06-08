@@ -190,7 +190,23 @@ h1 {
 .tech-tags span:nth-child(even) {
     background: var(--accent);
 }
+.certificates-section .experience-item a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
 
+.certificates-section .experience-item a:hover {
+    transform: scale(1.05);
+    color: #4f8cff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.certificates-section .experience-item:hover span {
+    color: #4f8cff;
+}
 /* HERO IMAGE */
 
 .hero-visual {
