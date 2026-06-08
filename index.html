@@ -148,43 +148,46 @@ Mateusz
 </div>
     </section>
 
-    <section id="projects" class="section projects-section">
-        <div class="section-header">
-            <div>
-                <span class="section-label">Portfolio</span>
-                <h2>Latest Projects</h2>
+<section id="projects" class="section projects-section">
+    <div class="section-header">
+        <div>
+            <span class="section-label">Portfolio</span>
+            <h2>Latest Projects</h2>
+        </div>
+
+        <a href="#contact" class="small-link">Collaboration →</a>
+    </div>
+
+    <div class="projects-grid">
+
+        <a href="projects/hybrid-factory-lakehouse.html"
+           class="project-card featured"
+           onclick="trackProjectClick('Hybrid Factory Lakehouse', 'Data Engineering');">
+
+            <div class="project-number">01</div>
+
+            <div class="project-image">
+                <img src="./assets/img/project_img.png" alt="Hybrid Factory Lakehouse">
             </div>
 
-            <a href="#contact" class="small-link">Collaboration →</a>
-        </div>
+            <h3>Hybrid Factory Lakehouse</h3>
 
-        <div class="projects-grid">
+            <p>
+                End-to-end Data Engineering project: on-premise Linux,
+                PostgreSQL, Redpanda, MinIO, ADLS Gen2, Event Hubs,
+                Azure Databricks and Delta Lake.
+            </p>
 
-            <a href="projects/hybrid-factory-lakehouse.html" class="project-card featured">
-                <div class="project-number">01</div>
+            <div class="project-tags">
+                <span>Databricks</span>
+                <span>Azure</span>
+                <span>PySpark</span>
+                <span>Docker</span>
+            </div>
+        </a>
 
-                <div class="project-image">
-                    <img src="./assets/img/project_img.png" alt="Hybrid Factory Lakehouse">
-                </div>
-
-                <h3>Hybrid Factory Lakehouse</h3>
-
-               <p>
-    End-to-end Data Engineering project: on-premise Linux,
-    PostgreSQL, Redpanda, MinIO, ADLS Gen2, Event Hubs,
-    Azure Databricks and Delta Lake.
-</p>
-
-                <div class="project-tags">
-                    <span>Databricks</span>
-                    <span>Azure</span>
-                    <span>PySpark</span>
-                    <span>Docker</span>
-                </div>
-            </a>
-
-        </div>
-    </section>
+    </div>
+</section>
     
         <section id="certificates" class="section certificates-section">
     <div class="section-label">Certificates</div>
@@ -396,6 +399,15 @@ Mateusz
             gtag('event', 'certificate_click', {
                 certificate_name: certificateName,
                 certificate_provider: certificateProvider
+            });
+        }
+    }
+
+    function trackProjectClick(projectName, projectCategory) {
+        if (typeof gtag === 'function') {
+            gtag('event', 'project_click', {
+                project_name: projectName,
+                project_category: projectCategory
             });
         }
     }
