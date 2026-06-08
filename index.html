@@ -5,28 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mateusz Leśniak | Portfolio</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CE8V5F3DKG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-CE8V5F3DKG');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CE8V5F3DKG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CE8V5F3DKG');
+    </script>
 </head>
+
 <body>
 
 <header class="header">
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="#about">About me</a></li>
-            <li><a href="#skills">Technologies</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#Engineering Focus">Engineering Focus</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#about"
+                   onclick="trackButtonClick('Navbar About me', 'navbar_navigation', 'navbar');">
+                    About me
+                </a>
+            </li>
+
+            <li>
+                <a href="#skills"
+                   onclick="trackButtonClick('Navbar Technologies', 'navbar_navigation', 'navbar');">
+                    Technologies
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects"
+                   onclick="trackButtonClick('Navbar Projects', 'navbar_navigation', 'navbar');">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="#certificates"
+                   onclick="trackButtonClick('Navbar Certificates', 'navbar_navigation', 'navbar');">
+                    Certificates
+                </a>
+            </li>
+
+            <li>
+                <a href="#experience"
+                   onclick="trackButtonClick('Navbar Experience', 'navbar_navigation', 'navbar');">
+                    Experience
+                </a>
+            </li>
+
+            <li>
+                <a href="#engineering-focus"
+                   onclick="trackButtonClick('Navbar Engineering Focus', 'navbar_navigation', 'navbar');">
+                    Engineering Focus
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact"
+                   onclick="trackButtonClick('Navbar Contact', 'navbar_navigation', 'navbar');">
+                    Contact
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -39,29 +82,36 @@
             <p class="eyebrow">Data Engineer · Business Analyst</p>
 
             <h1>
-               Hi, I’m<br>
-Mateusz
+                Hi, I’m<br>
+                Mateusz
             </h1>
 
             <p class="hero-description">
-    I design and build data engineering solutions using SQL, Python, PySpark,
-    Azure Databricks, Delta Lake and Microsoft Fabric, combining technical data work
-    with business process understanding.
-</p>
+                I design and build data engineering solutions using SQL, Python, PySpark,
+                Azure Databricks, Delta Lake and Microsoft Fabric, combining technical data work
+                with business process understanding.
+            </p>
 
             <div class="hero-actions">
-                <a href="#projects" class="btn-primary">My projects</a>
-                <a href="#contact" class="btn-secondary">Contact</a>
+                <a href="#projects"
+                   class="btn-primary"
+                   onclick="trackButtonClick('Hero My projects', 'internal_navigation', 'hero');">
+                    My projects
+                </a>
+
+                <a href="#contact"
+                   class="btn-secondary"
+                   onclick="trackButtonClick('Hero Contact', 'internal_navigation', 'hero');">
+                    Contact
+                </a>
+
                 <a href="./assets/cv/Mateusz_Lesniak_Data_Engineer_CV.pdf"
-   class="btn-third"
-   target="_blank"
-   rel="noopener noreferrer"
-   onclick="gtag('event', 'cv_click', {
-       'event_category': 'engagement',
-       'event_label': 'CV PDF'
-   });">
-   CV
-</a>              
+                   class="btn-third"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   onclick="trackButtonClick('Hero CV', 'cv_open', 'hero');">
+                    CV
+                </a>
             </div>
 
             <div class="tech-tags">
@@ -78,8 +128,6 @@ Mateusz
         </div>
 
         <div class="hero-visual">
-            
-
             <div class="profile-card">
                 <img src="./assets/img/profile.png" alt="Mateusz Leśniak" class="profile-cutout">
             </div>
@@ -87,23 +135,23 @@ Mateusz
 
     </section>
 
- <section id="about" class="section about-section">
-    <div class="section-label">About me</div>
+    <section id="about" class="section about-section">
+        <div class="section-label">About me</div>
 
-    <div class="about-grid">
-        <h2>Data Engineering with manufacturing and business process understanding.</h2>
+        <div class="about-grid">
+            <h2>Data Engineering with manufacturing and business process understanding.</h2>
 
-        <p>
-            I work in a manufacturing IT environment, focusing on data engineering,
-            system integration, data flows and process automation. I build practical
-            analytical solutions using Azure Databricks, SQL, Python, PySpark,
-            Delta Lake and Microsoft Fabric.
-            My background in business analysis and L2 application support helps me
-            understand real operational problems and translate them into reliable,
-            business-oriented data solutions.
-        </p>
-    </div>
-</section>
+            <p>
+                I work in a manufacturing IT environment, focusing on data engineering,
+                system integration, data flows and process automation. I build practical
+                analytical solutions using Azure Databricks, SQL, Python, PySpark,
+                Delta Lake and Microsoft Fabric.
+                My background in business analysis and L2 application support helps me
+                understand real operational problems and translate them into reliable,
+                business-oriented data solutions.
+            </p>
+        </div>
+    </section>
 
     <section id="skills" class="section">
         <div class="section-header">
@@ -113,276 +161,289 @@ Mateusz
             </div>
         </div>
 
-<div class="skills-grid">
-    <div class="skill-card">
-        <h3>Data Engineering & Architecture</h3>
-        <p>
-            Azure Databricks, PySpark, Delta Lake, Lakehouse architecture,
-            ETL/ELT pipelines, Medallion Architecture, batch and streaming data processing.
-        </p>
-    </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Data Engineering & Architecture</h3>
+                <p>
+                    Azure Databricks, PySpark, Delta Lake, Lakehouse architecture,
+                    ETL/ELT pipelines, Medallion Architecture, batch and streaming data processing.
+                </p>
+            </div>
 
-    <div class="skill-card">
-        <h3>Cloud Data Platform</h3>
-        <p>
-            Microsoft Fabric, Azure, ADLS Gen2, Event Hubs, data ingestion,
-            data integration, platform setup, environment configuration.
-        </p>
-    </div>
+            <div class="skill-card">
+                <h3>Cloud Data Platform</h3>
+                <p>
+                    Microsoft Fabric, Azure, ADLS Gen2, Event Hubs, data ingestion,
+                    data integration, platform setup, environment configuration.
+                </p>
+            </div>
 
-    <div class="skill-card">
-        <h3>Data Quality & Operations</h3>
-        <p>
-            Data quality checks, monitoring, troubleshooting, pipeline reliability,
-            incident analysis, performance optimization and support documentation.
-        </p>
-    </div>
+            <div class="skill-card">
+                <h3>Data Quality & Operations</h3>
+                <p>
+                    Data quality checks, monitoring, troubleshooting, pipeline reliability,
+                    incident analysis, performance optimization and support documentation.
+                </p>
+            </div>
 
-    <div class="skill-card">
-        <h3>Analytics & Business Delivery</h3>
-        <p>
-            SQL, Power BI-ready datasets, data modeling, reporting layers,
-            business requirements translation and stakeholder collaboration.
-        </p>
-    </div>
-</div>
+            <div class="skill-card">
+                <h3>Analytics & Business Delivery</h3>
+                <p>
+                    SQL, Power BI-ready datasets, data modeling, reporting layers,
+                    business requirements translation and stakeholder collaboration.
+                </p>
+            </div>
+        </div>
     </section>
 
-<section id="projects" class="section projects-section">
-    <div class="section-header">
-        <div>
-            <span class="section-label">Portfolio</span>
-            <h2>Latest Projects</h2>
+    <section id="projects" class="section projects-section">
+        <div class="section-header">
+            <div>
+                <span class="section-label">Portfolio</span>
+                <h2>Latest Projects</h2>
+            </div>
+
+            <a href="#contact"
+               class="small-link"
+               onclick="trackButtonClick('Projects Collaboration', 'internal_navigation', 'projects_section');">
+                Collaboration →
+            </a>
         </div>
 
-        <a href="#contact" class="small-link">Collaboration →</a>
-    </div>
+        <div class="projects-grid">
 
-    <div class="projects-grid">
+            <a href="projects/hybrid-factory-lakehouse.html"
+               class="project-card featured"
+               onclick="trackProjectClick('Hybrid Factory Lakehouse', 'Data Engineering', 'projects_section');">
 
-        <a href="projects/hybrid-factory-lakehouse.html"
-           class="project-card featured"
-           onclick="trackProjectClick('Hybrid Factory Lakehouse', 'Data Engineering');">
+                <div class="project-number">01</div>
 
-            <div class="project-number">01</div>
+                <div class="project-image">
+                    <img src="./assets/img/project_img.png" alt="Hybrid Factory Lakehouse">
+                </div>
 
-            <div class="project-image">
-                <img src="./assets/img/project_img.png" alt="Hybrid Factory Lakehouse">
-            </div>
+                <h3>Hybrid Factory Lakehouse</h3>
 
-            <h3>Hybrid Factory Lakehouse</h3>
-
-            <p>
-                End-to-end Data Engineering project: on-premise Linux,
-                PostgreSQL, Redpanda, MinIO, ADLS Gen2, Event Hubs,
-                Azure Databricks and Delta Lake.
-            </p>
-
-            <div class="project-tags">
-                <span>Databricks</span>
-                <span>Azure</span>
-                <span>PySpark</span>
-                <span>Docker</span>
-            </div>
-        </a>
-
-    </div>
-</section>
-    
-        <section id="certificates" class="section certificates-section">
-    <div class="section-label">Certificates</div>
-
-    <div class="experience-grid">
-        <div>
-            <h2>My certificates</h2>
-        </div>
-
-        <div class="experience-list">
-
-            <div class="experience-item">
-                <span>01</span>
                 <p>
-                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/MateuszLesniak-9697/2ABBFAA4597B464C?sharingId=71BBAAF3C59DB1D0"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       onclick="trackCertificateClick('Microsoft Certified: Azure Databricks Data Engineer Associate DP-750', 'Microsoft');">
-                        Microsoft Certified: Azure Databricks Data Engineer Associate DP-750
-                    </a>
+                    End-to-end Data Engineering project: on-premise Linux,
+                    PostgreSQL, Redpanda, MinIO, ADLS Gen2, Event Hubs,
+                    Azure Databricks and Delta Lake.
                 </p>
-            </div>
 
-            <div class="experience-item">
-                <span>02</span>
-                <p>
-                    <a href="https://credentials.databricks.com/a1b33a9e-ecce-4b6a-9b1a-3b4abfa137ab#acc.mPWJ1pDb"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       onclick="trackCertificateClick('Databricks Certified Data Engineer Associate', 'Databricks');">
-                        Databricks Certified Data Engineer Associate
-                    </a>
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <span>03</span>
-                <p>
-                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/MateuszLesniak-9697/60AD0761C80A05A?sharingId"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       onclick="trackCertificateClick('Microsoft Certified: Azure Fundamentals AZ-900', 'Microsoft');">
-                        Microsoft Certified: Azure Fundamentals AZ-900
-                    </a>
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <span>04</span>
-                <p>
-                    <a href="https://www.credly.com/badges/f8f2bd6e-2443-416d-976e-a79ec330ceb8/linked_in_profile"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       onclick="trackCertificateClick('Google Data Analytics Professional Certificate', 'Coursera');">
-                        Google Data Analytics Professional Certificate
-                    </a>
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <span>05</span>
-                <p>
-                    <a href="https://www.credly.com/badges/674e1fb2-0554-4935-83d2-afc34c570f81/linked_in_profile"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       onclick="trackCertificateClick('AgileBA Foundation', 'APMG International');">
-                        AgileBA® Foundation
-                    </a>
-                </p>
-            </div>
+                <div class="project-tags">
+                    <span>Databricks</span>
+                    <span>Azure</span>
+                    <span>PySpark</span>
+                    <span>Docker</span>
+                </div>
+            </a>
 
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="certificates" class="section certificates-section">
+        <div class="section-label">Certificates</div>
+
+        <div class="experience-grid">
+            <div>
+                <h2>My certificates</h2>
+            </div>
+
+            <div class="experience-list">
+
+                <div class="experience-item">
+                    <span>01</span>
+                    <p>
+                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/MateuszLesniak-9697/2ABBFAA4597B464C?sharingId=71BBAAF3C59DB1D0"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           onclick="trackCertificateClick('Microsoft Azure Databricks Data Engineer Associate DP-750', 'Microsoft', 'certificates_section');">
+                            Microsoft Certified: Azure Databricks Data Engineer Associate DP-750
+                        </a>
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <span>02</span>
+                    <p>
+                        <a href="https://credentials.databricks.com/a1b33a9e-ecce-4b6a-9b1a-3b4abfa137ab#acc.mPWJ1pDb"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           onclick="trackCertificateClick('Databricks Certified Data Engineer Associate', 'Databricks', 'certificates_section');">
+                            Databricks Certified Data Engineer Associate
+                        </a>
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <span>03</span>
+                    <p>
+                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/MateuszLesniak-9697/60AD0761C80A05A?sharingId"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           onclick="trackCertificateClick('Microsoft Azure Fundamentals AZ-900', 'Microsoft', 'certificates_section');">
+                            Microsoft Certified: Azure Fundamentals AZ-900
+                        </a>
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <span>04</span>
+                    <p>
+                        <a href="https://www.credly.com/badges/f8f2bd6e-2443-416d-976e-a79ec330ceb8/linked_in_profile"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           onclick="trackCertificateClick('Google Data Analytics Professional Certificate', 'Coursera', 'certificates_section');">
+                            Google Data Analytics Professional Certificate
+                        </a>
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <span>05</span>
+                    <p>
+                        <a href="https://www.credly.com/badges/674e1fb2-0554-4935-83d2-afc34c570f81/linked_in_profile"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           onclick="trackCertificateClick('AgileBA Foundation', 'APMG International', 'certificates_section');">
+                            AgileBA® Foundation
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <section id="experience" class="section experience-section">
-    <div class="section-label">Experience</div>
+        <div class="section-label">Experience</div>
 
-    <div class="experience-grid">
-        <div>
-            <h2>Data Engineering experience</h2>
-        </div>
-
-        <div class="experience-list">
-
-            <div class="experience-item">
-                <span>01</span>
-                <p>
-                    Developing and supporting data solutions using SQL, Python, PySpark,
-                    Azure Databricks and Delta Lake in a manufacturing IT environment.
-                </p>
+        <div class="experience-grid">
+            <div>
+                <h2>Data Engineering experience</h2>
             </div>
 
-            <div class="experience-item">
-                <span>02</span>
-                <p>
-                    Designing ETL/ELT data flows and transforming operational data into
-                    structured datasets for reporting, analytics and business decision-making.
-                </p>
-            </div>
+            <div class="experience-list">
 
-            <div class="experience-item">
-                <span>03</span>
-                <p>
-                    Working with lakehouse architecture concepts, including data ingestion,
-                    transformation layers, Delta tables and analytical data models.
-                </p>
-            </div>
+                <div class="experience-item">
+                    <span>01</span>
+                    <p>
+                        Developing and supporting data solutions using SQL, Python, PySpark,
+                        Azure Databricks and Delta Lake in a manufacturing IT environment.
+                    </p>
+                </div>
 
-            <div class="experience-item">
-                <span>04</span>
-                <p>
-                    Building SQL reports, Power BI-ready datasets and dashboards based on
-                    production, process and business data.
-                </p>
-            </div>
+                <div class="experience-item">
+                    <span>02</span>
+                    <p>
+                        Designing ETL/ELT data flows and transforming operational data into
+                        structured datasets for reporting, analytics and business decision-making.
+                    </p>
+                </div>
 
-            <div class="experience-item">
-                <span>05</span>
-                <p>
-                    Supporting data quality, troubleshooting data issues, monitoring data flows
-                    and analyzing incidents related to business and production applications.
-                </p>
-            </div>
+                <div class="experience-item">
+                    <span>03</span>
+                    <p>
+                        Working with lakehouse architecture concepts, including data ingestion,
+                        transformation layers, Delta tables and analytical data models.
+                    </p>
+                </div>
 
-            <div class="experience-item">
-                <span>06</span>
-                <p>
-                    Translating manufacturing business requirements into technical data solutions
-                    in cooperation with production, logistics, quality and IT teams.
-                </p>
-            </div>
+                <div class="experience-item">
+                    <span>04</span>
+                    <p>
+                        Building SQL reports, Power BI-ready datasets and dashboards based on
+                        production, process and business data.
+                    </p>
+                </div>
 
-            <div class="experience-item">
-                <span>07</span>
-                <p>
-                    Participating in factory IT transformation, system implementation and integration
-                    activities with a strong focus on data availability and process automation.
-                </p>
-            </div>
+                <div class="experience-item">
+                    <span>05</span>
+                    <p>
+                        Supporting data quality, troubleshooting data issues, monitoring data flows
+                        and analyzing incidents related to business and production applications.
+                    </p>
+                </div>
 
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="section-label">Engineering Focus</div>
+                <div class="experience-item">
+                    <span>06</span>
+                    <p>
+                        Translating manufacturing business requirements into technical data solutions
+                        in cooperation with production, logistics, quality and IT teams.
+                    </p>
+                </div>
 
-    <div class="experience-grid">
-        <div>
-            <h2>Building reliable data platforms, not only pipelines.</h2>
-        </div>
+                <div class="experience-item">
+                    <span>07</span>
+                    <p>
+                        Participating in factory IT transformation, system implementation and integration
+                        activities with a strong focus on data availability and process automation.
+                    </p>
+                </div>
 
-        <div class="experience-list">
-            <div class="experience-item">
-                <span>01</span>
-                <p>
-                    Designing lakehouse-oriented data solutions with clear ingestion,
-                    transformation and reporting layers.
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <span>02</span>
-                <p>
-                    Focusing on data quality, observability, monitoring and long-term
-                    maintainability of data pipelines.
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <span>03</span>
-                <p>
-                    Translating manufacturing and business requirements into scalable,
-                    production-ready data solutions.
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <span>04</span>
-                <p>
-                    Combining hands-on engineering with platform thinking, documentation,
-                    troubleshooting and cross-team collaboration.
-                </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="engineering-focus" class="section">
+        <div class="section-label">Engineering Focus</div>
+
+        <div class="experience-grid">
+            <div>
+                <h2>Building reliable data platforms, not only pipelines.</h2>
+            </div>
+
+            <div class="experience-list">
+                <div class="experience-item">
+                    <span>01</span>
+                    <p>
+                        Designing lakehouse-oriented data solutions with clear ingestion,
+                        transformation and reporting layers.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <span>02</span>
+                    <p>
+                        Focusing on data quality, observability, monitoring and long-term
+                        maintainability of data pipelines.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <span>03</span>
+                    <p>
+                        Translating manufacturing and business requirements into scalable,
+                        production-ready data solutions.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <span>04</span>
+                    <p>
+                        Combining hands-on engineering with platform thinking, documentation,
+                        troubleshooting and cross-team collaboration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="contact" class="contact-section">
         <p>Available for new opportunities</p>
         <h2>Let’s build something data-driven.</h2>
 
         <div class="contact-links">
-            <a href="mailto:mateuszlesniak302@gmail.com">Email</a>
-            <a class="linkedin-link" href="https://www.linkedin.com/in/mateusz-leśniak-05a47a2b6" target="_blank">
+            <a href="mailto:mateuszlesniak302@gmail.com"
+               onclick="trackContactClick('Email', 'contact_section');">
+                Email
+            </a>
+
+            <a class="linkedin-link"
+               href="https://www.linkedin.com/in/mateusz-leśniak-05a47a2b6"
+               target="_blank"
+               rel="noopener noreferrer"
+               onclick="trackContactClick('LinkedIn', 'contact_section');">
                 LinkedIn
             </a>
         </div>
@@ -393,24 +454,47 @@ Mateusz
 <footer class="footer">
     <p>© 2026 Mateusz Leśniak. Built with HTML, CSS and GitHub Pages.</p>
 </footer>
+
 <script>
-    function trackCertificateClick(certificateName, certificateProvider) {
+    function trackButtonClick(buttonName, buttonType, buttonLocation) {
         if (typeof gtag === 'function') {
-            gtag('event', 'certificate_click', {
-                certificate_name: certificateName,
-                certificate_provider: certificateProvider
+            gtag('event', 'portfolio_button_click', {
+                button_name: buttonName,
+                button_type: buttonType,
+                button_location: buttonLocation
             });
         }
     }
 
-    function trackProjectClick(projectName, projectCategory) {
+    function trackProjectClick(projectName, projectCategory, projectLocation) {
         if (typeof gtag === 'function') {
             gtag('event', 'project_click', {
                 project_name: projectName,
-                project_category: projectCategory
+                project_category: projectCategory,
+                project_location: projectLocation
+            });
+        }
+    }
+
+    function trackCertificateClick(certificateName, certificateProvider, certificateLocation) {
+        if (typeof gtag === 'function') {
+            gtag('event', 'certificate_click', {
+                certificate_name: certificateName,
+                certificate_provider: certificateProvider,
+                certificate_location: certificateLocation
+            });
+        }
+    }
+
+    function trackContactClick(contactType, contactLocation) {
+        if (typeof gtag === 'function') {
+            gtag('event', 'contact_click', {
+                contact_type: contactType,
+                contact_location: contactLocation
             });
         }
     }
 </script>
+
 </body>
 </html>
