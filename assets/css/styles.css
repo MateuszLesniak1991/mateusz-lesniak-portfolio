@@ -199,8 +199,7 @@ h1 {
 
 .certificates-section .experience-item a:hover {
     transform: scale(1.05);
-    color: #4f8cff;
-    text-decoration: underline;
+
     cursor: pointer;
 }
 
