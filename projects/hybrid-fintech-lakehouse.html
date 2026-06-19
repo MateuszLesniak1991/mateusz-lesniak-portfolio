@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hybrid FinTech Lakehouse Platform | Mateusz Leśniak</title>
+    <link rel="stylesheet" href="../assets/css/hybrid-fintech-lakehouse.css" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CE8V5F3DKG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CE8V5F3DKG');
+    </script>
+</head>
+<body>
+<header class="project-header">
+    <nav class="project-navbar">
+        <a href="../index.html" class="brand-link" onclick="trackButtonClick('Project Back Home', 'internal_navigation', 'project_navbar');">← Portfolio</a>
+        <ul class="project-nav-links">
+            <li><a href="#overview" onclick="trackButtonClick('Project Overview', 'navbar_navigation', 'project_navbar');">Overview</a></li>
+            <li><a href="#architecture" onclick="trackButtonClick('Project Architecture', 'navbar_navigation', 'project_navbar');">Architecture</a></li>
+            <li><a href="#streaming" onclick="trackButtonClick('Project Streaming', 'navbar_navigation', 'project_navbar');">Streaming</a></li>
+            <li><a href="#batch" onclick="trackButtonClick('Project Batch', 'navbar_navigation', 'project_navbar');">Batch</a></li>
+            <li><a href="#results" onclick="trackButtonClick('Project Results', 'navbar_navigation', 'project_navbar');">Results</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <p class="eyebrow">Data Engineering Portfolio Project</p>
+            <h1>Hybrid FinTech<br>Lakehouse Platform</h1>
+            <p class="project-hero-description">
+                End-to-end hybrid data engineering platform simulating realistic banking operations,
+                combining PostgreSQL, Redpanda, Azure Event Hubs, Microsoft Fabric, Power BI,
+                MinIO, ADLS Gen2 and a planned Databricks Lakehouse layer.
+            </p>
+            <div class="project-actions">
+                <a href="#architecture" class="btn-primary" onclick="trackButtonClick('Project View Architecture', 'internal_navigation', 'project_hero');">View architecture</a>
+                <a href="https://github.com/" class="btn-secondary" target="_blank" rel="noopener noreferrer" onclick="trackButtonClick('Project GitHub', 'external_navigation', 'project_hero');">GitHub repository</a>
+            </div>
+            <div class="tech-tags">
+                <span>PostgreSQL</span><span>Redpanda</span><span>Azure Event Hubs</span><span>Microsoft Fabric</span><span>Power BI</span><span>MinIO</span><span>ADLS Gen2</span><span>Databricks</span><span>PySpark</span><span>Delta Lake</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="section">
+        <div class="section-label">Project overview</div>
+        <div class="two-column-grid">
+            <h2>Realistic banking data platform with batch and streaming pipelines.</h2>
+            <div>
+                <p>
+                    The project simulates a modern fintech data platform where operational banking data
+                    is produced by multiple source systems and processed through both real-time and batch paths.
+                </p>
+                <p>
+                    It demonstrates historical banking data generation, continuous real-time transaction generation,
+                    transactional outbox streaming, Kafka-compatible Redpanda, Azure Event Hubs, Microsoft Fabric
+                    Eventstream, Eventhouse / KQL analytics, Power BI reporting and hourly Parquet-based Bronze
+                    replication to ADLS Gen2.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section metrics-section">
+        <div class="section-header"><div><span class="section-label">Dataset</span><h2>Generated banking scale</h2></div></div>
+        <div class="metrics-grid">
+            <div class="metric-card"><span>250,000</span><p>Historical banking transactions</p></div>
+            <div class="metric-card"><span>259,826</span><p>Operational streaming events</p></div>
+            <div class="metric-card"><span>5,000</span><p>Simulated customers</p></div>
+            <div class="metric-card"><span>744</span><p>Historical hourly transaction partitions</p></div>
+        </div>
+    </section>
+
+    <section id="architecture" class="section architecture-section">
+        <div class="section-header"><div><span class="section-label">Architecture</span><h2>Hybrid lakehouse architecture</h2></div></div>
+        <div class="architecture-card">
+            <img src="../assets/img/architecture.png" alt="Hybrid FinTech Lakehouse Platform architecture diagram">
+        </div>
+    </section>
+
+    <section id="streaming" class="section">
+        <div class="section-label">Streaming branch</div>
+        <div class="two-column-grid">
+            <h2>Real-time fraud monitoring pipeline.</h2>
+            <div>
+                <p>
+                    The streaming branch processes operational banking events through a transactional outbox pattern
+                    and a Kafka-compatible event pipeline. Historical events can be replayed for repeatable tests,
+                    while the real-time generator continuously creates new banking transactions.
+                </p>
+                <div class="flow-card">
+                    <p>Realtime banking generator</p><span>→</span>
+                    <p>PostgreSQL transactional outbox</p><span>→</span>
+                    <p>Redpanda</p><span>→</span>
+                    <p>Azure Event Hubs</p><span>→</span>
+                    <p>Microsoft Fabric Eventstream</p><span>→</span>
+                    <p>Eventhouse / KQL</p><span>→</span>
+                    <p>Fabric Dashboard and Power BI</p>
+                </div>
+            </div>
+        </div>
+        <div class="cards-grid">
+            <div class="info-card"><h3>Transactional outbox</h3><p>New transactions and matching events are written atomically to PostgreSQL. Only confirmed events are marked as delivered.</p></div>
+            <div class="info-card"><h3>Event Hub bridge</h3><p>A restartable Python bridge forwards events from Redpanda to Azure Event Hubs with batched delivery and safe offset commits.</p></div>
+            <div class="info-card"><h3>Fraud analytics</h3><p>Microsoft Fabric filters high-risk transactions and stores them in Eventhouse for KQL and Power BI monitoring.</p></div>
+        </div>
+    </section>
+
+    <section id="batch" class="section batch-section">
+        <div class="section-label">Batch branch</div>
+        <div class="two-column-grid">
+            <h2>Hourly Bronze replication and Databricks Lakehouse direction.</h2>
+            <div>
+                <p>
+                    The batch branch exports closed hourly transaction windows from PostgreSQL to MinIO as Snappy-compressed
+                    Parquet files and synchronizes the same partitioned Bronze structure to ADLS Gen2.
+                </p>
+                <p>
+                    The next layer is Azure Databricks, where Bronze Parquet data will be transformed into Delta Lake Silver
+                    tables and Gold analytical marts for customer, transaction, merchant and fraud-risk analytics.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-grid">
+            <div class="timeline-item"><span>01</span><h3>PostgreSQL to MinIO</h3><p>Hourly Parquet export at five minutes past each hour.</p></div>
+            <div class="timeline-item"><span>02</span><h3>MinIO to ADLS Gen2</h3><p>Idempotent partition-level cloud synchronization.</p></div>
+            <div class="timeline-item"><span>03</span><h3>Databricks Silver</h3><p>Cleansing, typing, deduplication and Delta Lake storage.</p></div>
+            <div class="timeline-item"><span>04</span><h3>Databricks Gold</h3><p>Analytical marts for Power BI and business reporting.</p></div>
+        </div>
+    </section>
+
+    <section id="results" class="section results-section">
+        <div class="section-header"><div><span class="section-label">Engineering outcomes</span><h2>What this project demonstrates</h2></div></div>
+        <div class="results-grid">
+            <div class="result-item"><span>01</span><p>Hybrid on-premises and cloud data architecture using local services and Azure cloud components.</p></div>
+            <div class="result-item"><span>02</span><p>Batch and streaming processing patterns implemented in one coherent banking scenario.</p></div>
+            <div class="result-item"><span>03</span><p>Kafka-compatible event streaming with Redpanda and Azure Event Hubs integration.</p></div>
+            <div class="result-item"><span>04</span><p>Microsoft Fabric Eventstream, Eventhouse and KQL used for real-time fraud analytics.</p></div>
+            <div class="result-item"><span>05</span><p>Power BI reporting layer combining historical replay events and continuously arriving real-time events.</p></div>
+            <div class="result-item"><span>06</span><p>Databricks Lakehouse branch for Silver and Gold Delta Lake analytical layers.</p></div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <p>Portfolio project</p>
+        <h2>Built to demonstrate practical Data Engineering.</h2>
+        <div class="contact-links">
+            <a href="../index.html" onclick="trackButtonClick('Project Back To Portfolio Bottom', 'internal_navigation', 'project_contact');">Back to portfolio</a>
+            <a href="mailto:mateuszlesniak302@gmail.com" onclick="trackContactClick('Email', 'project_contact');">Contact</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer"><p>© 2026 Mateusz Leśniak. Hybrid FinTech Lakehouse Platform.</p></footer>
+
+<script>
+    function trackButtonClick(buttonName, buttonType, buttonLocation) {
+        if (typeof gtag === 'function') {
+            gtag('event', 'portfolio_button_click', { button_name: buttonName, button_type: buttonType, button_location: buttonLocation });
+        }
+    }
+    function trackContactClick(contactType, contactLocation) {
+        if (typeof gtag === 'function') {
+            gtag('event', 'contact_click', { contact_type: contactType, contact_location: contactLocation });
+        }
+    }
+</script>
+</body>
+</html>
